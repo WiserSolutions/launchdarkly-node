@@ -1,0 +1,13 @@
+# IDE
+.idea
+
+# env
+.nvmrc
+
+# libs
+node_modules
+
+# build
+.nyc_output
+.coverage-cache
+coverage

@@ -1,0 +1,33 @@
+{
+  "name": "@wisersolutions/launchdarkly-node",
+  "version": "0.0.0",
+  "description": "LaunchDarkly SDK (Node.js, server-side) wrapper intended to provide a modern API and enforce best practices.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WiserSolutions/launchdarkly"
+  },
+  "author": "Wiser Solutions, Inc.",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "files": [
+    "/src/**/*.js"
+  ],
+  "scripts": {
+    "format": "prettier --write \"src/**/*.js\" --loglevel warn",
+    "lint": "eslint -f @wisersolutions/eslint-formatter-idea ./src",
+    "test": "jest 'src/'",
+    "tdd": "jest 'src/' --watch"
+  },
+  "devDependencies": {
+    "@wisersolutions/eslint-config": "^2.0.1",
+    "@wisersolutions/eslint-formatter-idea": "^1.0.5",
+    "eslint": "^6.7.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-jest": "^23.0.5",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "launchdarkly-node-server-sdk": "^5.13.4"
+  }
+}

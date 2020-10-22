@@ -8,9 +8,9 @@
   },
   "author": "Wiser Solutions, Inc.",
   "license": "MIT",
-  "main": "./src/index.js",
+  "main": "index.js",
   "files": [
-    "/src/**/*.js"
+    "index.js"
   ],
   "scripts": {
     "format": "prettier --write \"src/**/*.js\" --loglevel warn",
@@ -28,6 +28,7 @@
     "prettier": "^1.19.1"
   },
   "dependencies": {
+    "chalk": "^4.1.0",
     "launchdarkly-node-server-sdk": "^5.13.4"
   }
 }

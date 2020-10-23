@@ -2,5 +2,9 @@
   "extends": [
     "@wisersolutions",
     "@wisersolutions/eslint-config/jest"
-  ]
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "parser": "espree"
 }

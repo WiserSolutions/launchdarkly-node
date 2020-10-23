@@ -8,10 +8,23 @@ const log = (...args) => verbose && console.log(white.dim('[LaunchDarkly]'), ...
 let client
 let featuresReady
 
-async function init(appKey, options = {}) {
-  verbose = Boolean(options.verbose)
+function close() {
+  if (client) {
+    log('Closing connection.')
+    client.close()
+  }
 
-  if (featuresReady) return
+  client = undefined
+  featuresReady = undefined
+  verbose = false
+}
+
+async function init(appKey, options = {}) {
+  if (!appKey) throw new Error("Can't connect to LaunchDarkly without an app key!")
+
+  close()
+
+  verbose = Boolean(options.verbose)
 
   log('Connecting…')
   client = LaunchDarkly.init(appKey)
@@ -48,10 +61,6 @@ async function variation(featureKey, user, defaultValue) {
       resolve(value)
     })
   )
-}
-
-function close() {
-  client.close()
 }
 
 module.exports = {

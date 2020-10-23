@@ -13,10 +13,10 @@
     "index.js"
   ],
   "scripts": {
-    "format": "prettier --write \"src/**/*.js\" --loglevel warn",
-    "lint": "eslint -f @wisersolutions/eslint-formatter-idea ./src",
-    "test": "jest 'src/'",
-    "tdd": "jest 'src/' --watch"
+    "format": "prettier --write \"**/*.js\" --loglevel warn",
+    "lint": "eslint -f @wisersolutions/eslint-formatter-idea .",
+    "test": "jest",
+    "tdd": "jest --watch"
   },
   "devDependencies": {
     "@wisersolutions/eslint-config": "^2.0.1",
@@ -24,7 +24,7 @@
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-jest": "^23.0.5",
-    "jest": "^24.9.0",
+    "jest": "^26.6.1",
     "prettier": "^1.19.1"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@wisersolutions/launchdarkly-node",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "LaunchDarkly SDK (Node.js, server-side) wrapper intended to provide a modern API and enforce best practices.",
   "repository": {
     "type": "git",
